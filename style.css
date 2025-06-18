@@ -19,7 +19,6 @@ nav {
     background-color: #2a2a2a;
     padding: 0 30px;
     box-sizing: border-box;
-    text-align: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,10 +30,12 @@ h1 {
     font-size: 60px;
     text-shadow: 4px 4px 6px rgba(0,0,0,0.8);
     margin-left: 120px;
-    display: flex;
-    flex-grow: 1;
-    text-align: center;
-    justify-content: center;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+h1:hover {
+    transform: scale(1.05);
+    text-shadow: 6px 6px 12px rgba(255,255,255,0.3);
 }
 
 h2 {
@@ -44,6 +45,11 @@ h2 {
     text-shadow: 4px 4px 6px rgba(0,0,0,0.8);
     margin: 0;
     display: flex;
+    transition: transform 0.3s ease;
+}
+
+h2:hover {
+    transform: translateY(-2px);
 }
 
 h3 {
@@ -63,8 +69,8 @@ h4 {
 
 h5 {
     font-size: 2.3rem;
-    margin-bottom: 20px;
     font-weight: bold;
+    margin-top: 100px;
 }
 
 li {
@@ -74,15 +80,65 @@ li {
 a {
     color: #ffffff;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 a:hover {
     text-decoration: underline;
+    color: #ff6b6b;
 }
 
 iframe {
-    width: 60%;
-    height: 300px;
+    height: 240px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+}
+
+iframe:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255,255,255,0.1);
+}
+
+.iframes-links iframe {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.iframes-links {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.musica {
+    max-width: 500px;
+    min-width: 350px;
+}
+
+.platform-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    background-color: #ffffff;
+    border-radius: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spotify-title {
+    color: #1DB954;
+}
+
+.youtube-title {
+    color: #FF0000;
 }
 
 .album {
@@ -152,6 +208,20 @@ iframe {
     margin-bottom: 40px;
 }
 
+.productores-a {
+    background-color: #1a1a1a;
+    border-radius: 30px;
+    padding: 15px;
+    margin-top: 10px;
+    display: inline;
+}
+
+.hamburguesa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .canciones {
     font-size: 1.5rem;
 }
@@ -163,18 +233,55 @@ iframe {
 }
 
 .youtube{
-    width: 65px;
-    height: 65px;
-    margin-top: 80px;
+    width: 75px;
+    height: 75px;
 }
 .spotify{
-    width: 90px;
-    height: 90px;
-    margin-top: 80px;
+    width: 75px;
+    height: 75px;
 }
 
 .cerrar {
     width: 50px;
     margin-left: 40px;
     margin-top: 35px;
+}
+
+.productores-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    filter: grayscale(0.3);
+}
+
+.productores-img:hover {
+    transform: scale(1.1);
+    filter: grayscale(0);
+    box-shadow: 0 15px 40px rgba(255,255,255,0.2);
+}
+
+.productores {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    background-color: #2a2a2a;
+    padding: 20px;
 }
